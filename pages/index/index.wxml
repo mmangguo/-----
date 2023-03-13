@@ -1,0 +1,9 @@
+<!--index.wxml-->
+  <view class="userinfo">
+    <view class="namel">
+      <text class="userinfo-avatar">{{Path}}</text>
+    </view>
+    <view class="name">
+      <text class="gu"bindtap='guess'>{{title}}</text>
+    </view>
+  </view>
