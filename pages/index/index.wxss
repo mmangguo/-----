@@ -1,37 +1,47 @@
 /**index.wxss**/
-page{
-  background-color: rgba(255, 192, 203, 0.384);
+page {
+  background-color: #99CCCC;
 }
 
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 50px;
+.container {
+  top: 30%;
+  left: 20%;
 }
 
-.namel{
-  margin-top: 30px;
-}
-
-.userinfo-avatar {
+.title {
   font-weight: 600;
-  font-size: 100rpx;
-  color: #405f80;
+  color:#526b6b;
+  font-size: 80rpx;
 }
 
-.name{
-  margin-top: 500rpx;
-  border: 2px solid #405f80;
-  width: 400rpx;
-  height: 100rpx;
-  border-radius: 5px;
+.name {
+  font-weight: 500;
+  font-size: 60rpx;
+  margin-top: 20px;
+  color: #526b6b;
+}
+
+.button {
+  border: 8rpx solid #6187d3d8;
+  border-radius: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300rpx;
   text-align: center;
+  margin: 20% auto 0 auto;
+  height: 80rpx;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.795);
+  background-color: #73aae0;
 }
 
-.gu{
-  font-size: 70rpx;
-  font-weight: 620;
-  line-height: 88rpx;
-  color: #405f80;
+.addFoodName {
+  margin-top: 30px;
+  color: #526b6b;
+}
+
+.imagesize image{
+  width: 300rpx;
+  height: 400rpx;
 }

@@ -1,9 +1,17 @@
 <!--index.wxml-->
-  <view class="userinfo">
-    <view class="namel">
-      <text class="userinfo-avatar">{{Path}}</text>
+  <view class="container">
+    <view class="title">今天吃什么</view>
+    <view class="name">{{foodName}}</view>
+    <view class="button" bindtap="start" wx:if="{{!showBtn}}">开始</view>
+    <view class="button" bindtap="stop" wx:if="{{showBtn}}">就是他啦</view>
+    <view wx:if="{{showBtn}}" wx:key="title" wx:for="{{randomTextList}}" wx:for-item="randomText">
+      <view style="position:fixed; top: {{ randomText.top }}px; left: {{ randomText.left}}px; font-size: {{ randomText.fontSize}}px; opacity: {{ randomText.opacity}};">{{randomText.foodName}}</view>
     </view>
-    <view class="name">
-      <text class="gu"bindtap='guess'>{{title}}</text>
+    <view class="addFoodName" bindtap="onModal">自定义饭店</view>
+    <modal wx:if="{{visible}}" title="自定义饭店" bindconfirm="onOK" bindcancel="onModal">
+      <textarea type="text" placeholder="以逗号相隔" model:value="{{textAreaValue}}" />
+    </modal>
+    <view class="imagesize">
+      <image src="/image/cloud.png" mode="widthFix"></image>
     </view>
   </view>
